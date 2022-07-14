@@ -1,0 +1,31 @@
+@use "../tokens/colors.scss";
+
+#work {
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+  height: calc((100vh - 70px) * 0.15);
+
+  .work__title {
+    color: colors.$white;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: normal;
+  }
+
+  .projects {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    .projects__item {
+      border: 1px solid colors.$grey-light;
+      border-radius: 8px;
+      width: 20%;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

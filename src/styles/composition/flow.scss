@@ -1,0 +1,19 @@
+@use "../tokens/breakpoints.scss";
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+.flow-none > * + * {
+  margin-top: unset;
+}
+
+@each $key, $value in breakpoints.$sizes {
+  @media screen and (min-width: #{$value}px) {
+    .#{$key}\:flow > * + * {
+      margin-top: var(--flow-space, 1em);
+    }
+    .#{$key}\:flow-none > * + * {
+      margin-top: unset;
+    }
+  }
+}

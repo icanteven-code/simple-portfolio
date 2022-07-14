@@ -1,0 +1,30 @@
+@use "../tokens/colors.scss";
+@use "../tokens/border.scss";
+
+.btn {
+  color: colors.$white;
+  background-color: transparent;
+  border: 1px solid colors.$white;
+  border-radius: border.$radius-sm;
+  padding: 24px 64px;
+  cursor: pointer;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out,
+    box-shadow 300ms ease-in-out;
+
+  &:hover {
+    color: colors.$black;
+    background-color: colors.$white;
+  }
+}
+
+.btn[data-state="primary"] {
+  background-color: colors.$primary;
+  border-color: colors.$primary-light;
+  box-shadow: 0px 8px 30px rgba(63, 142, 0, 0.5);
+
+  &:hover {
+    color: colors.$white;
+    background-color: colors.$primary-light;
+    box-shadow: 0px 8px 45px rgba(63, 142, 0, 0.5);
+  }
+}
