@@ -1,0 +1,55 @@
+@use "../tokens/colors.scss";
+
+#projects {
+  .stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    margin-bottom: 4rem;
+
+    .stack-item {
+      border: 1px solid colors.$grey-light;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+  }
+
+  .projects {
+    display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and( min-width: 640px) {
+  #projects {
+    .stack {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and( min-width: 768px) {
+  #projects {
+    .stack {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -9,17 +9,31 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css"
+      integrity="sha512-OivR4OdSsE1onDm/i3J3Hpsm5GmOVvr9r49K3jJ0dnsxVzZgaOJ5MfxEAxCyGrzWozL9uJGKz6un3A7L+redIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header id="header">
+      <button class="mobile-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+
       <nav class="nav">
         <ul class="nav-list flow sm:flow-none" role="list">
-          <li class="nav-item"><a href="" class="link">Home</a></li>
-          <li class="nav-item"><a href="" class="link">Case Studies</a></li>
-          <li class="nav-item"><a href="" class="link">Testimonials</a></li>
+          <li class="nav-item"><a href="#" class="link">Home</a></li>
+          <li class="nav-item">
+            <a href="#projects" class="link">Projects</a>
+          </li>
           <li class="nav-item"><a href="" class="link">Recent work</a></li>
           <li class="nav-item"><a href="" class="link">Get In Touch</a></li>
         </ul>
@@ -27,7 +41,7 @@
     </header>
 
     <main>
-      <section id="about">
+      <section id="hero" class="section-field">
         <div class="info">
           <h1 class="info__name">Your Name Here</h1>
           <p class="info__text">
@@ -40,24 +54,260 @@
         <img class="about__img" src="./img/myself.jpg" alt="" />
       </section>
 
-      <section id="work">
-        <h2 class="work__title">Worked with</h2>
+      <section id="projects" class="section-field">
+        <h2 class="title" data-type="section">Projects</h2>
+
+        <ul class="stack" role="list">
+          <li class="stack-item">
+            <i class="fa-brands fa-html5"></i>
+            <span class="text">HTML</span>
+          </li>
+          <li class="stack-item">
+            <i class="fa-brands fa-css3-alt"></i>
+            <span class="text">CSS</span>
+          </li>
+          <li class="stack-item">
+            <i class="fa-brands fa-node-js"></i>
+            <span class="text">JS</span>
+          </li>
+          <li class="stack-item">
+            <i class="fa-brands fa-vuejs"></i>
+            <span class="text">Vue</span>
+          </li>
+          <li class="stack-item">
+            <i class="fa-brands fa-python"></i>
+            <span class="text">Python</span>
+          </li>
+        </ul>
+
         <ul class="projects" role="list">
-          <li class="projects__item">
-            <img src="./img/logo-clickup.png" alt="" />
+          <li class="project">
+            <article class="card">
+              <div class="card__img-container">
+                <img
+                  class="card__img"
+                  src="./img/project-1.jpg"
+                  alt="Project 1"
+                />
+              </div>
+              <div class="card__content">
+                <div class="tags">
+                  <span class="tag html"
+                    >HTML
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag css"
+                    >CSS
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag js"
+                    >JS
+                    <div class="indicator"></div
+                  ></span>
+                </div>
+
+                <h3 class="card__title">Project 1</h3>
+                <p class="card__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, ad cum? Sunt laboriosam itaque ex molestias! Qui ex
+                  corrupti deleniti itaque impedit, sunt enim eum alias corporis
+                  reprehenderit dolore hic?
+                </p>
+              </div>
+              <a href="" class="card__link"> See more </a>
+            </article>
           </li>
-          <li class="projects__item"><img src="./img/logo-db.png" alt="" /></li>
-          <li class="projects__item">
-            <img src="./img/logo-elastic.png" alt="" />
+
+          <li class="project">
+            <article class="card">
+              <div class="card__img-container">
+                <img
+                  class="card__img"
+                  src="./img/project-2.jpg"
+                  alt="Project 2"
+                />
+              </div>
+              <div class="card__content">
+                <div class="tags">
+                  <span class="tag html"
+                    >HTML
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag css"
+                    >CSS
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag js"
+                    >JS
+                    <div class="indicator"></div
+                  ></span>
+                </div>
+
+                <h3 class="card__title">Project 2</h3>
+                <p class="card__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, ad cum? Sunt laboriosam itaque ex molestias! Qui ex
+                  corrupti deleniti itaque impedit, sunt enim eum alias corporis
+                  reprehenderit dolore hic?
+                </p>
+              </div>
+              <a href="" class="card__link"> See more </a>
+            </article>
           </li>
-          <li class="projects__item">
-            <img src="./img/logo-paycheck.png" alt="" />
+
+          <li class="project">
+            <article class="card">
+              <div class="card__img-container">
+                <img
+                  class="card__img"
+                  src="./img/project-3.jpg"
+                  alt="Project 3"
+                />
+              </div>
+              <div class="card__content">
+                <div class="tags">
+                  <span class="tag html"
+                    >HTML
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag css"
+                    >CSS
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag js"
+                    >JS
+                    <div class="indicator"></div
+                  ></span>
+                </div>
+
+                <h3 class="card__title">Project 3</h3>
+                <p class="card__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, ad cum? Sunt laboriosam itaque ex molestias! Qui ex
+                  corrupti deleniti itaque impedit, sunt enim eum alias corporis
+                  reprehenderit dolore hic?
+                </p>
+              </div>
+              <a href="" class="card__link"> See more </a>
+            </article>
           </li>
-          <li class="projects__item">
-            <img src="./img/logo-stripe.png" alt="" />
+
+          <li class="project">
+            <article class="card">
+              <div class="card__img-container">
+                <img
+                  class="card__img"
+                  src="./img/project-4.jpg"
+                  alt="Project 4"
+                />
+              </div>
+              <div class="card__content">
+                <div class="tags">
+                  <span class="tag html"
+                    >HTML
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag css"
+                    >CSS
+                    <div class="indicator"></div
+                  ></span>
+                  <span class="tag js"
+                    >JS
+                    <div class="indicator"></div
+                  ></span>
+                </div>
+
+                <h3 class="card__title">Project 4</h3>
+                <p class="card__desc">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam, ad cum? Sunt laboriosam itaque ex molestias! Qui ex
+                  corrupti deleniti itaque impedit, sunt enim eum alias corporis
+                  reprehenderit dolore hic?
+                </p>
+              </div>
+              <a href="" class="card__link"> See more </a>
+            </article>
           </li>
         </ul>
       </section>
+
+      <section id="recent-work" class="section-field">
+        <h2 class="title" data-type="section">Recent work</h2>
+        <ul class="gallery" role="list">
+          <li>
+            <a data-fslightbox href="img/gallery-1.jpg" title="gallery-1">
+              <img src="img/gallery-1.jpg" alt="gallery-1" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-2.jpg" title="gallery-2">
+              <img src="img/gallery-2.jpg" alt="gallery-2" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-3.jpg" title="gallery-3">
+              <img src="img/gallery-3.jpg" alt="gallery-3" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-4.jpg" title="gallery-4">
+              <img src="img/gallery-4.jpg" alt="gallery-4" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-5.jpg" title="gallery-5">
+              <img src="img/gallery-5.jpg" alt="gallery-5" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-6.jpg" title="gallery-6">
+              <img src="img/gallery-6.jpg" alt="gallery-6" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-7.jpg" title="gallery-7">
+              <img src="img/gallery-7.jpg" alt="gallery-7" />
+            </a>
+          </li>
+          <li>
+            <a data-fslightbox href="img/gallery-8.jpg" title="gallery-8">
+              <img src="img/gallery-8.jpg" alt="gallery-8" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contacts" class="section-field">
+        <h2 class="title" data-type="section">Send me a message</h2>
+
+        <form action="#" method="post" class="form flow sm:flow-none">
+          <div class="form__name">
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+          </div>
+
+          <div class="form__email">
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+          </div>
+
+          <div class="form__msg">
+            <label for="msg">Message</label>
+            <textarea type="text" id="msg" rows="5"></textarea>
+          </div>
+
+          <button class="btn form__btn" data-state="primary">SEND</button>
+        </form>
+      </section>
     </main>
+
+    <footer>
+      <a href="https://icantevencode.com/" target="_blank" title="created by"
+        >Created by icantevencode</a
+      >
+    </footer>
+
+    <script src="./js/fslightbox.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

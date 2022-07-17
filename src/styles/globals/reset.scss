@@ -1,4 +1,10 @@
+// Font-awesome fix
+i[class*="fa"] {
+  font-style: normal;
+}
+
 /* Box sizing rules */
+
 *,
 *::before,
 *::after {

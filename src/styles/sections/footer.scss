@@ -1,0 +1,21 @@
+@use "../tokens/colors.scss";
+@use "../tokens/border.scss";
+
+footer {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  background-color: colors.$grey;
+  text-align: right;
+
+  border-top-left-radius: border.$radius;
+  border-top-right-radius: border.$radius;
+
+  a {
+    color: colors.$primary;
+    transition: color 300ms ease-in-out;
+    &:hover {
+      color: colors.$primary-light;
+    }
+  }
+}

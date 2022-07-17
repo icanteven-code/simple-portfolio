@@ -1,0 +1,50 @@
+@use "../tokens/colors.scss";
+@use "./header.scss";
+
+#hero {
+  margin: header.$headerHeight auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+
+  min-height: calc(100vh - #{header.$headerHeight});
+  padding: 2rem 0px;
+
+  .info {
+    text-align: center;
+
+    .info__name {
+      font-size: 44px;
+      line-height: 1;
+      color: colors.$white;
+      margin-bottom: 10px;
+    }
+
+    .info__text {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .about__img {
+    border-radius: 100%;
+    width: 85%;
+    max-width: 450px;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #hero {
+    min-height: calc((100vh - #{header.$headerHeight}) * 0.8);
+    flex-direction: row;
+    .info {
+      margin-right: 4rem;
+    }
+    .about__img {
+      width: 40%;
+      margin-bottom: unset;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../tokens/colors.scss";
+@use "../tokens/border.scss";
+
+.card {
+  border-radius: border.$radius;
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
+
+  .card__img-container {
+    aspect-ratio: 16 / 9;
+    .card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .card__content {
+    padding: 1rem 1.25rem;
+    background-color: colors.$grey;
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.75rem;
+      margin-bottom: 1rem;
+
+      .tag {
+        display: flex;
+        align-items: center;
+        .indicator {
+          margin-left: 8px;
+          width: 5px;
+          height: 5px;
+          border-radius: 100%;
+        }
+        &.html .indicator {
+          background-color: #f06529;
+        }
+        &.css .indicator {
+          background-color: #3c99dc;
+        }
+        &.js .indicator {
+          background-color: #f0db4f;
+        }
+      }
+    }
+
+    .card__title {
+      color: colors.$white;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+  }
+
+  .card__link {
+    color: colors.$white;
+    background-color: colors.$primary;
+    display: block;
+    padding: 1rem 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      color: colors.$grey;
+      background-color: colors.$primary-light;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

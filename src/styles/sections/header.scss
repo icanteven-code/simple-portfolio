@@ -4,9 +4,12 @@
 $headerHeight: 60px;
 
 #header {
-  // display: flex;
-  // justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -19,7 +22,54 @@ $headerHeight: 60px;
   border-bottom-left-radius: border.$radius;
   border-bottom-right-radius: border.$radius;
 
+  .mobile-menu {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    width: 20px;
+    height: 16px;
+    padding: 0px;
+
+    .bar {
+      width: 100%;
+      height: 2px;
+      background-color: colors.$white;
+      border-radius: border.$radius-sm;
+      transition: all 300ms ease-in-out;
+    }
+    .bar:nth-child(1) {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    .bar:nth-child(3) {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+
+    &.active {
+      .bar:nth-child(1) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .bar:nth-child(3) {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%) rotate(-45deg);
+      }
+    }
+  }
+
   .nav {
+    height: 0px;
+    overflow: hidden;
     position: absolute;
     top: calc(#{$headerHeight} - 0.25rem);
     left: 0px;
@@ -27,40 +77,51 @@ $headerHeight: 60px;
     background-color: colors.$grey;
     border-bottom-left-radius: border.$radius;
     border-bottom-right-radius: border.$radius;
-    padding: 0.5rem 0.75rem;
-    // display: flex;
-    // align-items: center;
+    padding: 0 0.75rem;
+    transition: all 300ms ease-in-out;
 
     .nav-list {
-      // display: flex;
-      // justify-content: space-evenly;
-      // align-items: center;
       width: 100%;
       text-align: center;
-
       .link {
         color: colors.$grey-light;
         text-decoration: none;
         font-size: 0.875rem;
       }
     }
+
+    &.active {
+      padding: 0.5rem 0.75rem;
+      height: 200px;
+    }
   }
 }
 
 @media screen and (min-width: 640px) {
   #header {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+
+    .mobile-menu {
+      display: none;
+    }
 
     .nav {
       position: relative;
       top: unset;
       left: unset;
 
+      height: auto;
+      overflow: unset;
+
       .nav-list {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+      }
+
+      &.active {
+        padding: unset;
+        height: unset;
       }
     }
   }

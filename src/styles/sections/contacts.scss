@@ -1,0 +1,54 @@
+@use "../tokens/colors.scss";
+@use "../tokens/border.scss";
+#contacts {
+  .form {
+    div {
+      label {
+        display: block;
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: 2px solid colors.$grey-light;
+        color: colors.$white;
+        background: transparent;
+        border-radius: border.$radius-sm;
+        padding: 0.25rem 0.75rem;
+      }
+      textarea {
+        resize: none;
+      }
+    }
+    .form__btn {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  #contacts {
+    .form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "msg msg"
+        "btn btn";
+        gap: 1rem 1.5rem;
+
+      .form__name {
+        grid-area: name;
+      }
+      .form__email {
+        grid-area: email;
+      }
+      .form__msg {
+        grid-area: msg;
+      }
+      .form__btn {
+        grid-area: btn;
+      }
+    }
+  }
+}
