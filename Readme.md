@@ -13,11 +13,17 @@ To-do
 - [x] Create Get in touch
 - [ ] Create typography utils & fluid titles
 - [x] alpineJS ? Or just simple plain JS
-- [ ] Gulp/Build - bundle SCSS files
-- [ ] Gulp/Build - minify and clean styles (PurgeCSS?)
-- [ ] Gulp/Build - CriticalCSS
-- [ ] Hosting/Deployment
-- [ ] Optimisation of images
+
+- Optimisation of images
+    - [x] Images - Sizes/Responsive
+    - [x] Images - Formats
+    - [x] Images - Lazyloading
+    
+- CSS Build/Optimisation
+    - [ ] Gulp/Build - bundle SCSS files
+    - [ ] Gulp/Build - minify and clean styles (PurgeCSS?)
+    - [ ] Gulp/Build - CriticalCSS
+    - [ ] Hosting/Deployment
 
 
 Resources

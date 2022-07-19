@@ -3,6 +3,7 @@
     "dev": "sass --watch src/styles/main.scss src/styles/main.css"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^2.0.1",
     "sass": "^1.53.0"
   }
 }

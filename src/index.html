@@ -51,7 +51,11 @@
           <button class="btn" data-state="primary">Let’s get started</button>
         </div>
 
-        <img class="about__img" src="./img/myself.jpg" alt="" />
+        <picture class="about__img">
+          <source srcset="./img/myself-420.webp" type="image/webp">
+          <source srcset="./img/myself-420.jpeg" type="image/jpeg">
+          <img src="./img/myself-420.jpeg" alt="Hero" />
+        </picture>
       </section>
 
       <section id="projects" class="section-field">
@@ -84,11 +88,35 @@
           <li class="project">
             <article class="card">
               <div class="card__img-container">
-                <img
-                  class="card__img"
-                  src="./img/project-1.jpg"
-                  alt="Project 1"
-                />
+                <picture class="card__img">
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-1-420.webp"
+                    type="image/webp"
+                  />
+
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-1-420.jpeg"
+                    type="image/jpeg"
+                  />
+
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-1-640.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-1-640.jpeg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./img/project-1-640.jpeg"
+                    loading="lazy"
+                    alt="Project 1"
+                  />
+                </picture>
               </div>
               <div class="card__content">
                 <div class="tags">
@@ -121,11 +149,32 @@
           <li class="project">
             <article class="card">
               <div class="card__img-container">
-                <img
-                  class="card__img"
-                  src="./img/project-2.jpg"
-                  alt="Project 2"
-                />
+                <picture class="card__img">
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-2-420.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-2-640.webp"
+                    type="image/webp"
+                  />
+
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-2-420.jpeg"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-2-640.jpeg"
+                  />
+                  <img
+                    src="./img/project-2-1920.jpeg"
+                    loading="lazy"
+                    alt="Project 1"
+                  />
+                </picture>
               </div>
               <div class="card__content">
                 <div class="tags">
@@ -158,11 +207,34 @@
           <li class="project">
             <article class="card">
               <div class="card__img-container">
-                <img
-                  class="card__img"
-                  src="./img/project-3.jpg"
-                  alt="Project 3"
-                />
+                <picture class="card__img">
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-3-420.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-3-640.webp"
+                    type="image/webp"
+                  />
+
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-3-420.jpeg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-3-640.jpeg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./img/project-3-640.jpeg"
+                    loading="lazy"
+                    alt="Project 1"
+                  />
+                </picture>
               </div>
               <div class="card__content">
                 <div class="tags">
@@ -195,11 +267,34 @@
           <li class="project">
             <article class="card">
               <div class="card__img-container">
-                <img
-                  class="card__img"
-                  src="./img/project-4.jpg"
-                  alt="Project 4"
-                />
+                <picture class="card__img">
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-4-420.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-4-640.webp"
+                    type="image/webp"
+                  />
+
+                  <source
+                    media="(max-width:420px), (min-width:640px)"
+                    srcset="./img/project-4-420.jpeg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(max-width:639px)"
+                    srcset="./img/project-4-640.jpeg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./img/project-4-640.jpeg"
+                    loading="lazy"
+                    alt="Project 1"
+                  />
+                </picture>
               </div>
               <div class="card__content">
                 <div class="tags">
@@ -235,43 +330,136 @@
         <h2 class="title" data-type="section">Recent work</h2>
         <ul class="gallery" role="list">
           <li>
-            <a data-fslightbox href="img/gallery-1.jpg" title="gallery-1">
-              <img src="img/gallery-1.jpg" alt="gallery-1" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-1.jpg"
+              title="gallery-1"
+            >
+              <picture>
+                <source srcset="./img/gallery-1-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-1-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-1-420.jpeg"
+                  loading="lazy"
+                  loading="lazy"
+                  alt="gallery-1"
+                />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-2.jpg" title="gallery-2">
-              <img src="img/gallery-2.jpg" alt="gallery-2" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-2.jpg"
+              title="gallery-2"
+            >
+              <picture>
+                <source srcset="./img/gallery-2-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-2-420.jpeg" type="image/jpeg" />
+                <img src="./img/gallery-2-420.jpeg" alt="gallery-2" />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-3.jpg" title="gallery-3">
-              <img src="img/gallery-3.jpg" alt="gallery-3" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-3.jpg"
+              title="gallery-3"
+            >
+              <picture>
+                <source srcset="./img/gallery-3-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-3-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-3-420.jpeg"
+                  loading="lazy"
+                  alt="gallery-3"
+                />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-4.jpg" title="gallery-4">
-              <img src="img/gallery-4.jpg" alt="gallery-4" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-4.jpg"
+              title="gallery-4"
+            >
+              <picture>
+                <source srcset="./img/gallery-4-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-4-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-4-420.jpeg"
+                  loading="lazy"
+                  alt="gallery-4"
+                />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-5.jpg" title="gallery-5">
-              <img src="img/gallery-5.jpg" alt="gallery-5" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-5.jpg"
+              title="gallery-5"
+            >
+              <picture>
+                <source srcset="./img/gallery-5-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-5-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-5-420.jpeg"
+                  loading="lazy"
+                  alt="gallery-5"
+                />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-6.jpg" title="gallery-6">
-              <img src="img/gallery-6.jpg" alt="gallery-6" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-6.jpg"
+              title="gallery-6"
+            >
+              <picture>
+                <source srcset="./img/gallery-6-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-6-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-6-420.jpeg"
+                  loading="lazy"
+                  alt="gallery-6"
+                />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-7.jpg" title="gallery-7">
-              <img src="img/gallery-7.jpg" alt="gallery-7" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-7.jpg"
+              title="gallery-7"
+            >
+              <picture>
+                <source srcset="./img/gallery-7-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-7-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-7-420.jpeg"
+                  loading="lazy"
+                  alt="gallery-7"
+                />
+              </picture>
             </a>
           </li>
           <li>
-            <a data-fslightbox href="img/gallery-8.jpg" title="gallery-8">
-              <img src="img/gallery-8.jpg" alt="gallery-8" />
+            <a
+              data-fslightbox
+              href="img/originals/gallery-8.jpg"
+              title="gallery-8"
+            >
+              <picture>
+                <source srcset="./img/gallery-8-420.webp" type="image/webp" />
+                <source srcset="./img/gallery-8-420.jpeg" type="image/jpeg" />
+                <img
+                  src="./img/gallery-8-420.jpeg"
+                  loading="lazy"
+                  alt="gallery-8"
+                />
+              </picture>
             </a>
           </li>
         </ul>
